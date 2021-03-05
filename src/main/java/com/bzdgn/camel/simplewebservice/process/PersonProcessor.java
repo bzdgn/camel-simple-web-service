@@ -14,7 +14,7 @@ public class PersonProcessor implements Processor {
         
         Person person = new Person(personId, "John Doe");
         
-        exchange.getIn().setBody(person, String.class);
+        exchange.getIn().setBody(person, Person.class);
     }
 
 }

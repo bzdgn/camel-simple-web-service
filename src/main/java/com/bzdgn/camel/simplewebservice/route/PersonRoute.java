@@ -20,6 +20,7 @@ public class PersonRoute extends RouteBuilder {
             .removeHeader(PERSON_ID_PROPERTY)
             .process(new PersonProcessor())
             .marshal().json(JsonLibrary.Gson)
+            .convertBodyTo(String.class)
             .log("Body produced: ${body}")
             ;
     }
