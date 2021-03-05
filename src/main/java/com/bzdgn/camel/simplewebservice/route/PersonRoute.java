@@ -15,6 +15,7 @@ public class PersonRoute extends RouteBuilder {
     public void configure() throws Exception {
         from(PERSON_ROUTE)
             .routeId(PERSON_ROUTE_ID)
+            .startupOrder(2)
             .log("Received request for id: ${in.header.personId}")
             .setProperty(PERSON_ID_PROPERTY, simple("${in.header.personId}"))
             .removeHeader(PERSON_ID_PROPERTY)
