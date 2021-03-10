@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
     - name: webservice-ctr
-      image: nigelpoulton/getting-started-k8s:1.0
+      image: divilioglu/camel-simple-app:1.0
       ports:
         - containerPort: 8080
